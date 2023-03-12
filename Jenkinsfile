@@ -15,7 +15,7 @@ pipeline {
         }   
      stage('Docker-file') {
             steps {
-              withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
+              withDockerRegistry([credentialsId: "docker-cred", url: ""]) {
               sh 'printenv'
               sh 'docker build -t sachin0710/sachin-jenkin:""$GIT_COMMIT"" .'
               sh 'docker push sachin0710/sachin-jenkin:""$GIT_COMMIT"".'
