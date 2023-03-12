@@ -13,6 +13,13 @@ pipeline {
               sh "mvn test"
             }
         }   
+     stage('Docker-file') {
+            steps {
+              sh 'printenv'
+              sh 'docker build -tag "sachin0710/Sachin-jenkin-image:""$GIT-COMMIT"".'
+              sh 'docker push "sachin0710/Sachin-jenkin-image:""$GIT-COMMIT"".'
+            }
+        }  
     }
     
 }
