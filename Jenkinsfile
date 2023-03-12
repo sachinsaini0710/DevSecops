@@ -16,8 +16,8 @@ pipeline {
      stage('Docker-file') {
             steps {
               sh 'printenv'
-              sh 'docker build -t sachin0710/sachin-jenkin-image:""$GIT-COMMIT"".'
-              sh 'docker push sachin0710/sachin-jenkin-image:""$GIT-COMMIT"".'
+              sh 'docker build -t sachin0710/sachin-jenkin-image:""$GIT_COMMIT"".'
+              sh 'docker push sachin0710/sachin-jenkin-image:""$GIT_COMMIT"".'
             }
         }  
     }
