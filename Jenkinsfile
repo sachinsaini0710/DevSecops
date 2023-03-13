@@ -17,8 +17,8 @@ pipeline {
             steps {
               withDockerRegistry([credentialsId: "docker-cred", url: ""]) {
               sh 'printenv'
-              sh 'docker build -t sachin0710/sachin-jenkins:""$GIT_COMMIT"" .'
-              sh 'docker push sachin0710/sachin-jenkins:""$GIT_COMMIT"".'
+              sh 'docker build -t sachin0710/sachin-jenkin:""$GIT_COMMIT"" .'
+              sh 'docker push sachin0710/sachin-jenkin:""$GIT_COMMIT"".'
             }
            }
         }  
